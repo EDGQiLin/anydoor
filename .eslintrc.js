@@ -1,0 +1,22 @@
+module.exports = {
+    "extends":["eslint:recommended"],
+    "rules":{
+        "no-console":["error",{
+            "allow":["warn","error","info"]//允许写console.warn\console.error\console.info
+        }]
+    },
+    "parser":"babel-eslint",//解析器parser
+    "parserOptions":{
+        "ecmaVersion":6,//ES6
+        "sourceType":"script"
+    },
+    "globals":{//配置全局变量
+        "window":true
+    },
+    "env":{
+        "browser":false,
+        "node":true,
+        "mocha":true,
+        "es6":true
+    }
+};
