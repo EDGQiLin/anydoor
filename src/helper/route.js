@@ -30,12 +30,12 @@ module.exports=async function(req,res,filePath){
                 }
                 res.end(template(data));
             // });
-        };
+        }
     }catch(err){
         console.error(err);
         res.statusCode=404;
         res.setHeader("Content-Type","text/plain");
         res.end(`${filePath} is not a directory or a file\n${err.toString()}`);
         return;
-    };
+    }
 };
